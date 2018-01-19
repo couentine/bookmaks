@@ -1,17 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-
 <h1>  <%= @topic.title %> </h1>
-</p>
-
-<p>
-
-<%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-info' %>
 
 <% @topic.bookmarks.each do |bookmark| %>
   <h3><u><%= link_to bookmark.url, topic_bookmark_path(@topic, bookmark) %></u></h3>
 <% end %>
+<p><%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-info' %></p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Back', topics_path %>
