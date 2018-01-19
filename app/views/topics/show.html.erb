@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @topic.title %>
+
+<h1>  <%= @topic.title %> </h1>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @topic.user %>
-</p>
 
 <%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-info' %>
 
