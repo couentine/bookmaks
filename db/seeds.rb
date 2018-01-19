@@ -13,6 +13,14 @@ users = User.all
   )
 end
 
+
+100.times do
+  Bookmark.create!(
+    url: Faker::Internet.domain_name,
+  )
+end
+
 puts "Seed finished"
 puts "#{User.count} users created"
 puts "#{Topic.count} topics created"
+puts "#{Bookmark.count} bookmarks created"
