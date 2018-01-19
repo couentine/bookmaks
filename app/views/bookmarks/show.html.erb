@@ -1,6 +1,8 @@
 <h1 class="text-center"><%= @bookmark.url %></h1>
-        <td><%= @bookmark.user.email %></td>
-        <h1 class="text-center"><%= @bookmark.url %></h1>
+      <p> by:  <td><%= @bookmark.user.email %></td></p>
+
+<p><%= render partial: 'likes/like', locals: { bookmark: @bookmark } %></p>
+
 <% if user_can_edit_b? %>
   <%= link_to "Edit Bookmark", edit_topic_bookmark_path(@bookmark.topic, @bookmark), class: 'btn btn-success' %>
 <%end%>
