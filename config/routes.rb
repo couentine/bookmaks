@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
+  root 'users#show'
 
   get 'likes/index'
 
@@ -19,7 +19,7 @@ end
 
   devise_for :users
   resources :users, only: [:show]
-  root 'welcome#index'
+  get 'welcome/index'
 
   get 'welcome/about'
 
