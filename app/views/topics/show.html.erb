@@ -2,8 +2,8 @@
 
 <% @topic.bookmarks.each do |bookmark| %>
 <ul>
-  <li><%= link_to bookmark.url, topic_bookmark_path(@topic, bookmark) %></li>
-<% end %></ul>
+  <li><%= link_to bookmark.url, topic_bookmark_path(@topic, bookmark) %></li></ul>
+<% end %>
 <p><%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-info' %></p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
