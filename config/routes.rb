@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+  get 'users/show'
+
   get 'likes/index'
 
   get 'bookmarks/show'
@@ -16,6 +18,7 @@ end
 
 
   devise_for :users
+  resources :users, only: [:show]
   root 'welcome#index'
 
   get 'welcome/about'
