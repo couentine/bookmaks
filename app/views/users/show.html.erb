@@ -2,10 +2,9 @@
 <% @user_topics.each do |topic| %>
 <h2><%= link_to topic.title, topic %></h2>
 <ul>
-  <li>
-  <% topic.bookmarks.each do |bookmark| %>
-    <h4><%= link_to bookmark.url, topic_bookmark_path(topic, bookmark) %></h4></li>
 
+  <% topic.bookmarks.each do |bookmark| %>
+  <li>  <h4><%= link_to bookmark.url, topic_bookmark_path(topic, bookmark) %></h4></li>
   <% end %>
     </ul>
 <% end %>
